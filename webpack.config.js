@@ -16,9 +16,20 @@ module.exports = (paths) => ({
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /(node_modules|bower_components)/,
         include: path.resolve(__dirname, paths.scripts.src),
-        use: "ts-loader",
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              [
+                "@babel/preset-env",
+                { targets: { browsers: ["last 2 versions"] } },
+              ],
+            ],
+            cacheDirectory: true,
+          },
+        },
       },
     ],
   },
-  plugins: [],
+  plugins: [new webpack.EnvironmentPlugin(["SERVER_API"])],
 });
