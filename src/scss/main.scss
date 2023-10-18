@@ -1,1 +1,78 @@
 @import "reset";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import "../js/displayProducts/displayProducts.scss";
+$primary-color: #00c0ee;
+$black-color: #000000;
+$grey-dark-color: rgba(0, 0, 0, 0.5);
+$grey-light-color: #666666;
+$white-color: #ffffff;
+$font-default: "Open Sans", sans-serif;
+
+*,
+html,
+body {
+  font-family: $font-default;
+}
+
+.content {
+  display: flex;
+
+  #productContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .asideFilter {
+    display: flex;
+    justify-content: space-between;
+  }
+  .titleFilter {
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  .containerFilter {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+  .checkboxLabel {
+    padding-left: 10px;
+  }
+  input[type="checkbox"].checkboxColor {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $grey-light-color;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"].checkboxColor:checked::before {
+    content: "\2713"; // Caractere Unicode para o símbolo de marca de seleção
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5px;
+    background: $primary-color;
+    color: $primary-color;
+  }
+
+  input[type="checkbox"].checkboxColor:checked::after {
+    content: "";
+    display: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}

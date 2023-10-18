@@ -1,19 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desenvolvedor M3</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedor M3</title>
-  <link rel="stylesheet" href="main.css" />
-</head>
+  <body>
+    <header class="header">
+      <img src="" alt="" />
 
-<body>
+      <button>Minicart</button>
+    </header>
+    <main class="content" class="relative">
+      <aside class="asideFilter">
+        <div class="content__subcontent">
+          <h1>Blusas</h1>
+          <p class="titleFilter">Cores</p>
+          <div id="filterColor">
+            <div class="containerFilter">
+              <input type="checkbox" name="Amarelo" class="checkboxColor" />
+              <label class="checkboxLabel" for="checkboxYellow">Amarelo</label>
+            </div>
+            <div class="containerFilter">
+              <input
+                type="checkbox"
+                name="Azul"
+                id="checkboxBlue"
+                class="checkboxColor"
+              />
+              <label class="checkboxLabel" for="checkboxBlue">Azul</label>
+            </div>
+            <div class="containerFilter">
+              <input
+                type="checkbox"
+                name="Branco"
+                id="checkboxWhite"
+                class="checkboxColor"
+              />
+              <label class="checkboxLabel" for="checkboxWhite">Branco</label>
+            </div>
+            <div class="containerFilter">
+              <input
+                type="checkbox"
+                name="Cinza"
+                id="checkboxGray"
+                class="checkboxColor"
+              />
+              <label class="checkboxLabel" for="checkboxGray">Cinza</label>
+            </div>
+            <div class="containerFilter">
+              <input
+                type="checkbox"
+                name="Laranja"
+                id="checkboxOrange"
+                class="checkboxColor"
+              />
+              <label class="checkboxLabel" for="checkboxOrange">Laranja</label>
+            </div>
+            <div class="containerFilter">
+              <input
+                type="checkbox"
+                name="Verde"
+                id="checkboxGreen"
+                class="checkboxColor"
+              />
+              <label class="checkboxLabel" for="checkboxGreen">Verde</label>
+            </div>
+            <div class="containerFilter">
+              <input
+                type="checkbox"
+                name="Vermelho"
+                id="checkboxRed"
+                class="checkboxColor"
+              />
+              <label class="checkboxLabel" for="checkboxRed">Vermelho</label>
+            </div>
+            <div class="containerFilter">
+              <input
+                type="checkbox"
+                name="Preto"
+                id="checkboxBlack"
+                class="checkboxColor"
+              />
+              <label class="checkboxLabel" for="checkboxBlack">Preto</label>
+            </div>
+            <div class="containerFilter">
+              <input
+                type="checkbox"
+                name="Rosa"
+                id="checkboxPink"
+                class="checkboxColor"
+              />
+              <label class="checkboxLabel" for="checkboxPink">Rosa</label>
+            </div>
+            <div class="containerFilter">
+              <input
+                type="checkbox"
+                name="Vinho"
+                id="checkboxWine"
+                class="checkboxColor"
+              />
+              <label class="checkboxLabel" for="checkboxWine">Vinho</label>
+            </div>
+          </div>
 
-</body>
-<h1>Desafio  fqwfq</h1>
+          <div id="filterSize">
+            <div class="">
+              <input type="checkbox" name="P" id="checkboxP" />
+              <label class="" for="checkboxP">P</label>
+            </div>
+            <div class="">
+              <input type="checkbox" name="M" id="checkboxM" />
+              <label class="" for="checkboxM">M</label>
+            </div>
+            <div class="">
+              <input type="checkbox" name="G" id="checkboxG" />
+              <label class="content__sidebar_subtitles" for="checkboxG"
+                >G</label
+              >
+            </div>
+            <div class="">
+              <input type="checkbox" name="GG" id="checkboxGG" />
+              <label class="content__sidebar_subtitles" for="checkboxGG"
+                >GG</label
+              >
+            </div>
+            <div class="">
+              <input type="checkbox" name="U" id="checkboxU" />
+              <label class="content__sidebar_subtitles" for="checkboxU"
+                >U</label
+              >
+            </div>
+            <div class="">
+              <input type="checkbox" name="36" id="checkbox36" />
+              <label class="content__sidebar_subtitles" for="checkbox36"
+                >36</label
+              >
+            </div>
+            <div class="">
+              <input type="checkbox" name="38" id="checkbox38" />
+              <label class="" for="checkbox38">38</label>
+            </div>
+            <div class="">
+              <input type="checkbox" name="40" id="checkbox40" />
+              <label class="" for="checkbox40">40</label>
+            </div>
+          </div>
 
-<script src="bundle.js"></script>
-
+          <div id="filterPrice">
+            <div class="">
+              <input type="checkbox" name="0-50" id="checkbox0-50" />
+              <label class="" for="checkbox0-50">de R$0 até R$50</label>
+            </div>
+            <div class="">
+              <input type="checkbox" name="51-150" id="checkbox51-150" />
+              <label class="" for="checkbox51-150">de R$51 até R$150</label>
+            </div>
+            <div class="">
+              <input type="checkbox" name="151-300" id="checkbox151-300" />
+              <label class="content__sidebar_subtitles" for="checkbox151-300"
+                >de R$151 até R$300
+              </label>
+            </div>
+            <div class="">
+              <input type="checkbox" name="301-500" id="checkbox301-500" />
+              <label class="content__sidebar_subtitles" for="checkbox301-500"
+                >de R$301 até R$500</label
+              >
+            </div>
+            <div class="">
+              <input type="checkbox" name="500" id="checkbox500" />
+              <label class="content__sidebar_subtitles" for="checkbox500"
+                >a partir de R$500</label
+              >
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div>
+        <div id="productContainer"></div>
+        <div class="absolute">selector</div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">M3: IMPLANTAÇÃO DE ECOMMERCE VTEX</p>
+    </footer>
+  </body>
+  <script src="bundle.js"></script>
 </html>
