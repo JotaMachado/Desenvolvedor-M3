@@ -1,4 +1,4 @@
-export function FilterSize() {
+export function FilterPrice() {
   const products = document.querySelectorAll(".product");
   const selectedCategories = Array.from(
     document.querySelectorAll('input[type="checkbox"]:checked')
@@ -22,5 +22,5 @@ export function FilterSize() {
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener("change", FilterSize);
+  checkbox.addEventListener("change", FilterPrice);
 });
