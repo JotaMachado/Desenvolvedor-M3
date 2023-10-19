@@ -4,29 +4,25 @@ export function FilterColor() {
     document.querySelectorAll('input[type="checkbox"]:checked')
   ).map((checkbox) => checkbox.getAttribute("name"));
 
-
   const selectedCategoriesByValue = Array.from(
     document.querySelectorAll('input[type="checkbox"]:checked')
   ).map((checkbox) => checkbox.getAttribute("value"));
-
-
 
   products.forEach((product) => {
     const productSizes = product.getAttribute("data-size").split(",");
     const productColors = product.getAttribute("data-color");
     const productPrice = parseFloat(product.getAttribute("data-price"));
 
-
     const isVisible = selectedCategoriesByName.every(
       (category) =>
-        productSizes.includes(category) || productColors.includes(category) || searchByPrice(productPrice, selectedCategoriesByValue)
+        productSizes.includes(category) ||
+        productColors.includes(category) ||
+        searchByPrice(productPrice, selectedCategoriesByValue)
     );
-
+    console.log(product);
     product.style.display = isVisible ? "block" : "none";
-    debugger
   });
 }
-
 
 function searchByPrice(productPrice, selectedCategoriesByValue) {
   if (selectedCategoriesByValue[0] != null) {
@@ -50,11 +46,9 @@ function searchByPrice(productPrice, selectedCategoriesByValue) {
       }
       return isVisibleByPrice;
     }
-
   }
   return false;
 }
-
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 checkboxes.forEach((checkbox) => {

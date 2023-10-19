@@ -10,7 +10,7 @@
 
   <body>
     <header class="header">
-      <img src="" alt="" />
+      <img src="./img/logo-m3.png" alt="logo m3" />
 
       <button>Minicart</button>
     </header>
@@ -18,7 +18,7 @@
       <aside class="asideFilter">
         <div class="content__subcontent">
           <h1>Blusas</h1>
-          <p class="titleFilter">Cores</p>
+          <p class="titleFilterColor">Cores</p>
           <div id="filterColor">
             <div class="containerFilter">
               <input type="checkbox" name="Amarelo" class="checkboxColor" />
@@ -152,27 +152,52 @@
 
           <div id="filterPrice">
             <div class="">
-              <input type="checkbox" name="0-50" id="checkbox0-50" value='{"type": "price", "value": "0-50"}' />
+              <input
+                type="checkbox"
+                name="0-50"
+                id="checkbox0-50"
+                value='{"type": "price", "value": "0-50"}'
+              />
               <label class="" for="checkbox0-50">de R$0 até R$50</label>
             </div>
             <div class="">
-              <input type="checkbox" name="51-150" id="checkbox51-150"  value='{"type": "price", "value": "51-150"}' />
+              <input
+                type="checkbox"
+                name="51-150"
+                id="checkbox51-150"
+                value='{"type": "price", "value": "51-150"}'
+              />
               <label class="" for="checkbox51-150">de R$51 até R$150</label>
             </div>
             <div class="">
-              <input type="checkbox" name="151-300" id="checkbox151-300"  value='{"type": "price", "value": "151-300"}' />
+              <input
+                type="checkbox"
+                name="151-300"
+                id="checkbox151-300"
+                value='{"type": "price", "value": "151-300"}'
+              />
               <label class="content__sidebar_subtitles" for="checkbox151-300"
                 >de R$151 até R$300
               </label>
             </div>
             <div class="">
-              <input type="checkbox" name="301-500" id="checkbox301-500" value='{"type": "price", "value": "301-500"}' />
+              <input
+                type="checkbox"
+                name="301-500"
+                id="checkbox301-500"
+                value='{"type": "price", "value": "301-500"}'
+              />
               <label class="content__sidebar_subtitles" for="checkbox301-500"
                 >de R$301 até R$500</label
               >
             </div>
             <div class="">
-              <input type="checkbox" name="500" id="checkbox500"  value='{"type": "price", "value": "500"}' />
+              <input
+                type="checkbox"
+                name="500"
+                id="checkbox500"
+                value='{"type": "price", "value": "500"}'
+              />
               <label class="content__sidebar_subtitles" for="checkbox500"
                 >a partir de R$500</label
               >
@@ -182,7 +207,14 @@
       </aside>
       <div>
         <div id="productContainer"></div>
-        <div class="absolute">selector</div>
+      </div>
+      <div class="sorting">
+        <button id="sortBtn" class="sortBtn">Ordenar por:</button>
+        <div id="sortOptions" class="sort-options">
+          <button id="recent" class="btnRecent">Mais recentes</button>
+          <button id="ascending" class="btnAscending">Menor preço</button>
+          <button id="descending" class="btnDescending">Maior preço</button>
+        </div>
       </div>
     </main>
     <footer class="footer">

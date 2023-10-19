@@ -11,11 +11,13 @@ $font-default: "Open Sans", sans-serif;
   #productContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-left: 240px;
 
     .product {
       display: flex;
       align-items: center;
-      padding: 25px;
+      padding: 32px;
+      left: 350px;
       flex-direction: column;
       &__image {
         height: 293px;

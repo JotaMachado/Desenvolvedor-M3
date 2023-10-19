@@ -20,6 +20,7 @@ export function fetchData() {
         productDiv.setAttribute("data-color", product.color);
         productDiv.setAttribute("data-size", product.size);
         productDiv.setAttribute("data-price", product.price);
+        productDiv.setAttribute("data-date", product.date);
         const productContent = `
             <img class="product__image" src="${product.image}" alt="${
           product.name

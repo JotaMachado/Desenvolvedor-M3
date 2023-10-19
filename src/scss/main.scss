@@ -14,23 +14,26 @@ body {
   font-family: $font-default;
 }
 
+.header {
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  height: 48px;
+  border-bottom: 2px solid #c7c7c7;
+  z-index: 100;
+}
 .content {
   display: flex;
-
-  #productContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
 
   .asideFilter {
     display: flex;
     justify-content: space-between;
   }
-  .titleFilter {
+  .titleFilterColor {
     padding-bottom: 10px;
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .containerFilter {
@@ -75,4 +78,38 @@ body {
     height: 20px;
     cursor: pointer;
   }
+}
+
+.sorting {
+  position: relative;
+}
+
+.sortBtn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.sort-options {
+  display: none;
+  position: absolute;
+  top: 40px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.sort-options button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.sort-options button:hover {
+  background-color: #f1f1f1;
 }
