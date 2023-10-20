@@ -3,11 +3,6 @@ const jsonServerURL = "http://localhost:5000/products";
 const dataList = document.getElementById("productContainer");
 
 export function fetchData() {
-  let filteredProducts = [];
-  let checkedSize;
-  let checkedColor;
-  let checkedPrice;
-
   fetch(jsonServerURL)
     .then((response) => response.json())
     .then((data) => {
@@ -30,7 +25,7 @@ export function fetchData() {
             <p class="product__installments">até ${
               product.parcelamento[0]
             }x de R$ ${product.parcelamento[1].toFixed(2)}</p>
-            <button class="product__button">Comprar</button>
+            <button class="product__purchase">Comprar</button>
         `;
 
         productDiv.innerHTML = productContent;

@@ -12,6 +12,7 @@ $font-default: "Open Sans", sans-serif;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding-left: 240px;
+    padding-top: 90px;
 
     .product {
       display: flex;
@@ -41,7 +42,7 @@ $font-default: "Open Sans", sans-serif;
         color: $grey-light-color;
       }
 
-      &__button {
+      &__purchase {
         text-transform: uppercase;
         background-color: $black-color;
         color: $white-color;
@@ -51,6 +52,7 @@ $font-default: "Open Sans", sans-serif;
         width: 195px;
         height: 33px;
         border: 0;
+        cursor: pointer;
       }
     }
   }

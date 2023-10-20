@@ -12,13 +12,14 @@
     <header class="header">
       <img src="./img/logo-m3.png" alt="logo m3" />
 
-      <button>Minicart</button>
+      <button id="headerCart" class="headerCart">Minicart</button>
+      <div id="Cart" class="Cart"></div>
     </header>
     <main class="content" class="relative">
       <aside class="asideFilter">
         <div class="content__subcontent">
-          <h1>Blusas</h1>
-          <p class="titleFilterColor">Cores</p>
+          <div class="title">Blusas</div>
+          <p class="subtitles">Cores</p>
           <div id="filterColor">
             <div class="containerFilter">
               <input type="checkbox" name="Amarelo" class="checkboxColor" />
@@ -107,98 +108,112 @@
             </div>
           </div>
 
-          <div id="filterSize">
-            <div class="">
+          <div class="subtitles">Tamanhos</div>
+          <div class="filterSize" id="filterSize">
+            <div class="checkbox-size">
               <input type="checkbox" name="P" id="checkboxP" />
-              <label class="" for="checkboxP">P</label>
+              <label class="checkmark" for="checkboxP">P</label>
             </div>
-            <div class="">
+            <div class="checkbox-size">
               <input type="checkbox" name="M" id="checkboxM" />
-              <label class="" for="checkboxM">M</label>
+              <label class="checkmark" for="checkboxM">M</label>
             </div>
-            <div class="">
+            <div class="checkbox-size">
               <input type="checkbox" name="G" id="checkboxG" />
-              <label class="content__sidebar_subtitles" for="checkboxG"
-                >G</label
-              >
+              <label class="checkmark" for="checkboxG">G</label>
             </div>
-            <div class="">
+            <div class="checkbox-size">
               <input type="checkbox" name="GG" id="checkboxGG" />
-              <label class="content__sidebar_subtitles" for="checkboxGG"
-                >GG</label
-              >
+              <label class="checkmark" for="checkboxGG">GG</label>
             </div>
-            <div class="">
+            <div class="checkbox-size">
               <input type="checkbox" name="U" id="checkboxU" />
-              <label class="content__sidebar_subtitles" for="checkboxU"
-                >U</label
-              >
+              <label class="checkmark" for="checkboxU">U</label>
             </div>
-            <div class="">
+            <div class="checkbox-size">
               <input type="checkbox" name="36" id="checkbox36" />
-              <label class="content__sidebar_subtitles" for="checkbox36"
-                >36</label
-              >
+              <label class="checkmark" for="checkbox36">36</label>
             </div>
-            <div class="">
+            <div class="checkbox-size">
               <input type="checkbox" name="38" id="checkbox38" />
-              <label class="" for="checkbox38">38</label>
+              <label class="checkmark" class="" for="checkbox38">38</label>
             </div>
-            <div class="">
+            <div class="checkbox-size">
               <input type="checkbox" name="40" id="checkbox40" />
-              <label class="" for="checkbox40">40</label>
+              <label class="checkmark" class="" for="checkbox40">40</label>
+            </div>
+            <div class="checkbox-size">
+              <input type="checkbox" name="42" id="checkbox42" />
+              <label class="checkmark" class="" for="checkbox42">42</label>
+            </div>
+            <div class="checkbox-size">
+              <input type="checkbox" name="44" id="checkbox44" />
+              <label class="checkmark" class="" for="checkbox44">44</label>
+            </div>
+            <div class="checkbox-size">
+              <input type="checkbox" name="46" id="checkbox46" />
+              <label class="checkmark" class="" for="checkbox46">46</label>
             </div>
           </div>
 
           <div id="filterPrice">
-            <div class="">
+            <div class="containerFilter">
               <input
                 type="checkbox"
                 name="0-50"
                 id="checkbox0-50"
                 value='{"type": "price", "value": "0-50"}'
+                class="checkboxColor"
               />
-              <label class="" for="checkbox0-50">de R$0 até R$50</label>
+              <label class="checkboxLabel" for="checkbox0-50"
+                >de R$0 até R$50</label
+              >
             </div>
-            <div class="">
+            <div class="containerFilter">
               <input
                 type="checkbox"
                 name="51-150"
                 id="checkbox51-150"
                 value='{"type": "price", "value": "51-150"}'
+                class="checkboxColor"
               />
-              <label class="" for="checkbox51-150">de R$51 até R$150</label>
+              <label class="checkboxLabel" for="checkbox51-150"
+                >de R$51 até R$150</label
+              >
             </div>
-            <div class="">
+            <div class="containerFilter">
               <input
                 type="checkbox"
                 name="151-300"
                 id="checkbox151-300"
                 value='{"type": "price", "value": "151-300"}'
+                class="checkboxColor"
               />
-              <label class="content__sidebar_subtitles" for="checkbox151-300"
+              <label class="checkboxLabel" for="checkbox151-300"
                 >de R$151 até R$300
               </label>
             </div>
-            <div class="">
+            <div class="containerFilter">
               <input
                 type="checkbox"
                 name="301-500"
                 id="checkbox301-500"
                 value='{"type": "price", "value": "301-500"}'
+                class="checkboxColor"
               />
-              <label class="content__sidebar_subtitles" for="checkbox301-500"
+              <label class="checkboxLabel" for="checkbox301-500"
                 >de R$301 até R$500</label
               >
             </div>
-            <div class="">
+            <div class="containerFilter">
               <input
                 type="checkbox"
                 name="500"
                 id="checkbox500"
                 value='{"type": "price", "value": "500"}'
+                class="checkboxColor"
               />
-              <label class="content__sidebar_subtitles" for="checkbox500"
+              <label class="checkboxLabel" for="checkbox500"
                 >a partir de R$500</label
               >
             </div>

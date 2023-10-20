@@ -16,14 +16,31 @@ body {
 
 .header {
   top: 0;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 48px;
   border-bottom: 2px solid #c7c7c7;
   z-index: 100;
 }
+
+.title {
+  font-size: 32px;
+  font-weight: 400;
+  word-wrap: break-word;
+  padding: 35px 10px 20px 30px;
+}
+.subtitles {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 400;
+  padding: 20px 10px 20px 30px;
+}
 .content {
   display: flex;
+  min-height: 100vh;
 
   .asideFilter {
     display: flex;
@@ -80,22 +97,55 @@ body {
   }
 }
 
-.sorting {
+.filterSize {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 30px;
+}
+.checkbox-size {
+  flex: 0 0 calc(25% - 10px); /* Defina a largura das colunas aqui */
+  margin-right: 10px; /* Espaço entre as colunas */
+  margin-bottom: 40px; /* Espaço entre as linhas */
   position: relative;
+  cursor: pointer;
+  font-size: 16px;
+}
+.checkbox-size input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkbox-size label {
+  position: absolute;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid $grey-light-color;
+  text-align: center;
+  color: $grey-light-color;
+  line-height: 32px;
+}
+
+.sorting {
+  position: absolute;
+  padding: 40px 0 0 1300px;
 }
 
 .sortBtn {
-  background-color: #333;
-  color: #fff;
+  background-color: $white-color;
+  color: $black-color;
+  width: 142px;
   padding: 10px 20px;
-  border: none;
+  border: 1px solid #ccc;
   cursor: pointer;
 }
 
 .sort-options {
   display: none;
   position: absolute;
-  top: 40px;
+  width: 140px;
   background-color: #fff;
   border: 1px solid #ccc;
 }
@@ -111,5 +161,14 @@ body {
 }
 
 .sort-options button:hover {
-  background-color: #f1f1f1;
+  background-color: $primary-color;
+  color: $white-color;
+}
+.footer {
+  background-color: $black-color; /* Cor de fundo do rodapé */
+  color: #fff; /* Cor do texto no rodapé */
+  text-align: center; /* Centralize o texto */
+  padding: 20px; /* Espaçamento interno para o conteúdo do rodapé */
+  position: absolute; /* Posição absoluta para mantê-lo no final da página */
+  width: 100%; /* Largura total da página */
 }
