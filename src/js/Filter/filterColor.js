@@ -19,7 +19,6 @@ export function FilterColor() {
         productColors.includes(category) ||
         searchByPrice(productPrice, selectedCategoriesByValue)
     );
-    console.log(product);
     product.style.display = isVisible ? "block" : "none";
   });
 }
