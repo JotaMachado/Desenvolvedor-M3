@@ -17,14 +17,34 @@ body {
 .header {
   top: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  column-gap: 770px;
   align-items: center;
   width: 100%;
   height: 48px;
   border-bottom: 2px solid #c7c7c7;
   z-index: 100;
 }
-
+.cart {
+  position: absolute;
+}
+.headerCart {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cartBag {
+  border: none;
+  background-color: $white-color;
+}
 .title {
   font-size: 32px;
   font-weight: 400;
@@ -45,6 +65,7 @@ body {
   .asideFilter {
     display: flex;
     justify-content: space-between;
+    padding-left: 100px;
   }
   .titleFilterColor {
     padding-bottom: 10px;
@@ -57,8 +78,7 @@ body {
     display: flex;
     position: relative;
     align-items: center;
-    padding-left: 30px;
-    padding-right: 10px;
+    padding: 0 10px 5px 30px;
   }
   .checkboxLabel {
     padding-left: 10px;
@@ -103,9 +123,9 @@ body {
   padding-left: 30px;
 }
 .checkbox-size {
-  flex: 0 0 calc(25% - 10px); /* Defina a largura das colunas aqui */
-  margin-right: 10px; /* Espaço entre as colunas */
-  margin-bottom: 40px; /* Espaço entre as linhas */
+  flex: 0 0 calc(25% - 10px);
+  margin-right: 10px;
+  margin-bottom: 40px;
   position: relative;
   cursor: pointer;
   font-size: 16px;
@@ -114,6 +134,11 @@ body {
   position: absolute;
   opacity: 0;
   cursor: pointer;
+}
+
+.checkbox-size input[type="checkbox"]:checked + .checkmark {
+  border: 1px solid #00c0ee;
+  font-weight: bold;
 }
 .checkbox-size label {
   position: absolute;
@@ -125,12 +150,16 @@ body {
   border: 1px solid $grey-light-color;
   text-align: center;
   color: $grey-light-color;
+  cursor: pointer;
   line-height: 32px;
+}
+.checkbox-size label::after {
+  border: 1px solid $primary-color;
 }
 
 .sorting {
   position: absolute;
-  padding: 40px 0 0 1300px;
+  padding: 40px 0 0 1210px;
 }
 
 .sortBtn {
@@ -165,10 +194,41 @@ body {
   color: $white-color;
 }
 .footer {
-  background-color: $black-color; /* Cor de fundo do rodapé */
-  color: #fff; /* Cor do texto no rodapé */
-  text-align: center; /* Centralize o texto */
-  padding: 20px; /* Espaçamento interno para o conteúdo do rodapé */
-  position: absolute; /* Posição absoluta para mantê-lo no final da página */
-  width: 100%; /* Largura total da página */
+  background-color: $black-color;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+  .header {
+    column-gap: 20px;
+  }
+  .content {
+    .asideFilter {
+      padding-left: 0;
+    }
+  }
+  .subtitles {
+    display: none;
+  }
+  .title {
+  }
+  .checkboxColor {
+    display: none;
+  }
+  .checkboxLabel {
+    display: none;
+  }
+  .checkbox-size {
+    display: none;
+  }
 }

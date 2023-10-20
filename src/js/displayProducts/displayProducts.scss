@@ -11,7 +11,7 @@ $font-default: "Open Sans", sans-serif;
   #productContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding-left: 240px;
+    padding-left: 100px;
     padding-top: 90px;
 
     .product {
@@ -54,6 +54,19 @@ $font-default: "Open Sans", sans-serif;
         border: 0;
         cursor: pointer;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    #productContainer {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 15px 15px 0;
     }
   }
 }
