@@ -5,6 +5,11 @@
 
   
 ----
+
+### Pontos faltantes
+- Responsividade
+- Carrinho de compras
+- Carregar mais produtos
 ### Instruções para uso
 Para o projeto funcionar de forma correta é necessário possuir instalado o  nodejs na versão 14 ou superior
 
